@@ -1,12 +1,13 @@
 /**
 
-JSZip - A Javascript class for generating Zip files
+JSZip - A Javascript class for generating and reading zip files
 <http://stuartk.com/jszip>
 
 (c) 2011 David Duponchel <d.duponchel@gmail.com>
-Licenced under the GPLv3 and the MIT licences
+Dual licenced under the MIT license or GPLv3. See LICENSE.markdown.
 
 **/
+/*global JSZip,JSZipBase64 */
 (function () {
 
    /**
@@ -14,8 +15,7 @@ Licenced under the GPLv3 and the MIT licences
     * @param {string} str the string to prettify.
     * @return {string} a pretty string.
     */
-   var pretty = function (str)
-   {
+   var pretty = function (str) {
       var res = '', code, i;
       for (i = 0; i < str.length; i++)
       {
@@ -30,8 +30,7 @@ Licenced under the GPLv3 and the MIT licences
     * @param {string} compressionMethod the method magic to find.
     * @return {Object|null} the JSZip compression object, null if none found.
     */
-   var findCompression = function (compressionMethod)
-   {
+   var findCompression = function (compressionMethod) {
       for (var method in JSZip.compressions)
       {
          if (JSZip.compressions[method].magic === compressionMethod)
@@ -170,8 +169,7 @@ Licenced under the GPLv3 and the MIT licences
     * @param {Object} options Options of the current file.
     * @param {Object} loadOptions Options for loading the stream.
     */
-   function ZipEntry(options, loadOptions)
-   {
+   function ZipEntry(options, loadOptions) {
       this.options = options;
       this.loadOptions = loadOptions;
    }
@@ -397,11 +395,12 @@ Licenced under the GPLv3 and the MIT licences
     * @param {string} data the binary stream to load.
     * @param {Object} loadOptions Options for loading the stream.
     */
-   function ZipEntries(data, loadOptions)
-   {
+   function ZipEntries(data, loadOptions) {
       this.files = [];
       this.loadOptions = loadOptions;
-      if (data) this.load(data);
+      if (data) {
+         this.load(data);
+      }
    }
    ZipEntries.prototype = {
       /**
@@ -567,8 +566,7 @@ Licenced under the GPLv3 and the MIT licences
     * @param {Object} options Options for loading the stream.
     *  options.base64 : is the stream in base64 ? default : false
     */
-   JSZip.prototype.load = function(data, options)
-   {
+   JSZip.prototype.load = function(data, options) {
       var files, zipEntries, i, input;
       options = options || {};
       if(options.base64)
@@ -591,6 +589,6 @@ Licenced under the GPLv3 and the MIT licences
       return this;
    };
 
-})();
+}());
 // enforcing Stuk's coding style
 // vim: set shiftwidth=3 softtabstop=3 foldmethod=marker:
