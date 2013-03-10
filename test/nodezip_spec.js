@@ -1,11 +1,11 @@
-describe('nodeZip', function() {
+describe('nodezip', function() {
   beforeEach(function() {
-    this.nodeZip = require('..')();
+    this.nodezip = require('..')();
   });
   
   describe('when initialized', function() {
-    it('should load JSZip in this.nodeZip', function() {
-      expect(this.nodeZip.options).not.toBeNull();
+    it('should load JSZip in this.nodezip', function() {
+      expect(this.nodezip.options).not.toBeNull();
     });
 
     it('should declare JSZip', function() {
@@ -16,7 +16,7 @@ describe('nodeZip', function() {
   describe('when archiving a dummy file', function() {
     beforeEach(function() {
       this.fs = require("fs");
-      this.dummyFile = this.nodeZip.file('test.file', 'hello there');
+      this.dummyFile = this.nodezip.file('test.file', 'hello there');
       this.dummyFileData = this.dummyFile.generate({base64:false,compression:'DEFLATE'});
     });
     

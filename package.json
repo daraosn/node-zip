@@ -14,7 +14,7 @@
     "node-zip",
     "compression"
   ],
-  "main": "lib/nodeZip.js",
+  "main": "lib/nodezip.js",
   "dependencies": {},
   "devDependencies": {},
   "optionalDependencies": {},
