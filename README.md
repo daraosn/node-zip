@@ -39,6 +39,12 @@ Write to a file (IMPORTANT: use *binary* encode, thanks to @Acek)
 	var data = zip.generate({base64:false,compression:'DEFLATE'});
 	fs.writeFile('test.zip', data, 'binary');
 
+Testing
+-------
+
+	npm install -g jasmine-node
+	jasmine-node test
+
 Manual
 ------
 
