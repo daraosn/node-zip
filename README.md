@@ -37,7 +37,7 @@ Write to a file (IMPORTANT: use *binary* encode, thanks to @Acek)
 	var fs = require("fs");
 	zip.file('test.txt', 'hello there');
 	var data = zip.generate({base64:false,compression:'DEFLATE'});
-	fs.writeFile('test.zip', data, 'binary');
+	fs.writeFileSync('test.zip', data, 'binary');
 
 Testing
 -------
