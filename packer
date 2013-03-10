@@ -1,7 +1,0 @@
-#!/bin/bash
-echo "#!/usr/bin/env node" > nodezip
-cat vendor/jszip/jszip.js vendor/jszip/jszip-deflate.js vendor/jszip/jszip-inflate.js vendor/jszip/jszip-load.js > nodezip.tmp
-cat lib/nodezip-cli.js >> nodezip.tmp
-uglifyjs nodezip.tmp >> nodezip
-rm nodezip.tmp
-chmod +x nodezip
