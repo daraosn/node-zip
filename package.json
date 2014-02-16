@@ -18,7 +18,9 @@
     "nodezip": "bin/nodezip"
   },
   "main": "lib/nodezip.js",
-  "dependencies": {},
+  "dependencies": {
+    "jszip" : "2.1.1"
+  },
   "devDependencies": {},
   "optionalDependencies": {},
   "engines": {
