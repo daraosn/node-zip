@@ -51,6 +51,13 @@ Manual
 node-zip uses JSZip, please refer to their website for further information:
 http://stuartk.com/jszip/
 
+Contributors
+------------
+
+> David Duponchel [@dduponchel](https://github.com/dduponchel)
+
+Feel free to send your pull requests and contribute to this project
+
 License
 -------
 
