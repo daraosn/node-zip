@@ -34,7 +34,7 @@ describe('nodezip', function() {
     it('should be able to deflate file', function() {
       this.dummyFileData = this.fs.readFileSync('test.zip', 'binary');
       this.dummyFile = new JSZip(this.dummyFileData, {base64: false, checkCRC32: true});
-      expect(this.dummyFile.files['test.file'].data).toEqual("hello there");
+      expect(this.dummyFile.files['test.file'].asText()).toEqual("hello there");
       this.fs.unlink('test.zip');
     });
   });
