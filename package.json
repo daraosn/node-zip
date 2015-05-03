@@ -2,7 +2,7 @@
   "author": "Diego Araos <d@wehack.it> (http://wehack.it/)",
   "name": "node-zip",
   "description": "node-zip - Zip/Unzip files ported from JSZip",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "homepage": "https://github.com/daraosn/node-zip",
   "repository": {
     "url": "git://github.com/daraosn/node-zip.git"
@@ -25,7 +25,7 @@
   },
   "main": "lib/nodezip.js",
   "dependencies": {
-    "jszip" : "2.2.1"
+    "jszip" : "2.5.0"
   },
   "devDependencies": {},
   "optionalDependencies": {},
