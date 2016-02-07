@@ -7,6 +7,7 @@
   "repository": {
     "url": "git://github.com/daraosn/node-zip.git"
   },
+  "license": "MIT",
   "contributors": [
     {
       "name": "David Duponchel",
