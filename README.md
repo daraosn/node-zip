@@ -26,12 +26,6 @@ Unzip:
 	console.log(zip.files['test.file']); // hello there
 
 
-You can also load directly:
-
-	require('node-zip');
-	var zip = new JSZip(data, options)
-	...
-
 Write to a file (IMPORTANT: use *binary* encode, thanks to @Acek)
 
 	var fs = require("fs");
