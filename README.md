@@ -19,7 +19,12 @@ var fs = require('fs');
 var path = require('path');
 
 // The zip library needs to be instantiated:
-var zip = new require('node-zip')();
+var JSZip = require('node-zip');
+
+// call the constructor to create a new zip archive in-memory.
+// all subsequent calls to zip will be put into this file.
+// if you want to create multiple archives, you will need to create another object.
+var zip = new JSZip();
 
 // You can add multiple files by performing subsequent calls to zip.file();
 // the first argument is how you want the file to be named inside your zip,
@@ -46,8 +51,10 @@ var zip = new JSZip(data, options)
 ### Zip text into file:
 
 ```js
-var zip = new require('node-zip')();
+var JSZip = require('node-zip');
 
+// call the constructor to create a new zip archive in-memory
+var zip = new JSZip();
 zip.file('test.file', 'hello there');
 var data = zip.generate({base64:false,compression:'DEFLATE'});
 console.log(data); // ugly data
@@ -56,7 +63,8 @@ console.log(data); // ugly data
 ### Unzip:
 
 ```js
-var zip = new require('node-zip')(data, {base64: false, checkCRC32: true});
+var JSZip = require('node-zip');
+var zip = new JSZip(data, {base64: false, checkCRC32: true});
 console.log(zip.files['test.file']); // hello there
 ```
 
