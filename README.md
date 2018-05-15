@@ -71,8 +71,7 @@ fs.writeFileSync('test.zip', data, 'binary');
 ## Testing
 
 ```sh
-npm install -g jasmine-node
-jasmine-node test
+npm test
 ```
 
 ## Manual
