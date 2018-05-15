@@ -1,5 +1,8 @@
 # node-zip
 
+[![Build Status](https://travis-ci.com/daraosn/node-zip.svg?branch=master)](https://travis-ci.com/daraosn/node-zip)
+![Codecov](https://img.shields.io/codecov/c/github/daraosn/node-zip.svg)
+
 
 node-zip - Zip/Unzip files ported from JSZip
 

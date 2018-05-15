@@ -26,12 +26,14 @@
   },
   "main": "lib/nodezip.js",
   "scripts": {
-    "test": "jasmine-node test"
+    "test": "istanbul cover jasmine-node --captureExceptions test"
   },
   "dependencies": {
     "jszip": "2.5.0"
   },
   "devDependencies": {
+    "codecov": "^3.0.2",
+    "istanbul": "^0.4.5",
     "jasmine-node": "^1.14.5"
   },
   "optionalDependencies": {},
