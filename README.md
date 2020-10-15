@@ -78,7 +78,7 @@ jasmine-node test
 ## Manual
 
 node-zip uses JSZip, please refer to their website for further information:
-http://stuartk.com/jszip/
+https://stuk.github.io/jszip/
 
 ## Contributors
 
