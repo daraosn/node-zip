@@ -26,7 +26,7 @@
   },
   "main": "lib/nodezip.js",
   "dependencies": {
-    "jszip" : "2.5.0"
+    "jszip" : "2.6.1"
   },
   "devDependencies": {},
   "optionalDependencies": {},
